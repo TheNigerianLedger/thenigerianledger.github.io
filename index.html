@@ -4,8 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Nigerian Ledger</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #1c1c2e;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #2a2a2a;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            list-style: none;
+            padding: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #e0e0e0;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content li a:hover {
+            background: #3a3a3a;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1c1c2e;
+            margin-top: 20px;
+        }
+
+        /* Subscription Popup */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #1a1a3f;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            border: 2px solid #ff00ff;
+        }
+
+        .popup button {
+            background: #ff00ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .popup button:hover {
+            background: #d100d1;
+        }
+    </style>
 </head>
 <body>
 
@@ -89,123 +189,249 @@
         <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Subscription Popup Logic
+            const popup = document.getElementById('subscribe-popup');
+            setTimeout(() => { popup.style.display = 'flex'; }, 5000);
+
+            document.getElementById('subscribe-btn').addEventListener('click', () => {
+                alert("Thank you for subscribing!");
+                popup.style.display = 'none';
+            });
+
+            document.getElementById('close-popup').addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) popup.style.display = 'none';
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') popup.style.display = 'none';
+            });
+        });
+    </script>
+
 </body>
-                </html>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nigerian Ledger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
 
-  /* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background: #121212;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 0;
-}
+        /* Navigation Bar */
+        .navbar {
+            background: #1c1c2e;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Navigation Bar */
-.navbar {
-    background: #1c1c2e;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
 
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #2a2a2a;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            list-style: none;
+            padding: 0;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: #2a2a2a;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    list-style: none;
-    padding: 0;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .dropdown-content li a {
+            color: #e0e0e0;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
 
-.dropdown-content li a {
-    color: #e0e0e0;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-}
+        .dropdown-content li a:hover {
+            background: #3a3a3a;
+        }
 
-.dropdown-content li a:hover {
-    background: #3a3a3a;
-}
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #1c1c2e;
-    margin-top: 20px;
-}
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1c1c2e;
+            margin-top: 20px;
+        }
 
-/* Subscription Popup */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+        /* Subscription Popup */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
 
-.popup-content {
-    background: #1a1a3f;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 400px;
-    border: 2px solid #ff00ff;
-}
+        .popup-content {
+            background: #1a1a3f;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            border: 2px solid #ff00ff;
+        }
 
-.popup button {
-    background: #ff00ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
+        .popup button {
+            background: #ff00ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-.popup button:hover {
-    background: #d100d1;
-}
+        .popup button:hover {
+            background: #d100d1;
+        }
+    </style>
+</head>
+<body>
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Subscription Popup Logic
-    const popup = document.getElementById('subscribe-popup');
-    setTimeout(() => { popup.style.display = 'flex'; }, 5000);
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">The Nigerian Ledger</span>
+            <p class="tagline">Truth · Accountability · One Entry at a Time</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#fraud-archives">Fraud Archives</a></li>
+            <li><a href="#discourse">Discourse Hub</a></li>
+            <li><a href="#marketplace">Marketplace</a></li>
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#press">Press & Features</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-    document.getElementById('subscribe-btn').addEventListener('click', () => {
-        alert("Thank you for subscribing!");
-        popup.style.display = 'none';
-    });
+    <!-- Fraud Archives Section -->
+    <section id="fraud-archives" class="section">
+        <h2>Fraud Archives</h2>
+        <p>Explore past and present fraud cases.</p>
+    </section>
 
-    document.getElementById('close-popup').addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
+    <!-- Discourse Hub Section -->
+    <section id="discourse" class="section">
+        <h2>Dabira's Discourse Hub</h2>
+        <p>Discuss systemic issues in Nigeria and beyond.</p>
+    </section>
 
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) popup.style.display = 'none';
-    });
+    <!-- Marketplace Section -->
+    <section id="marketplace" class="section">
+        <h2>Crafted by Dabira</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/bag1.jpg" alt="Naija Jumbo Tote">
+                <h3>Naija Jumbo Tote</h3>
+                <p>₦15,000</p>
+            </div>
+        </div>
+    </section>
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') popup.style.display = 'none';
-    });
-});
+    <!-- Buy Me a Coffee -->
+    <section id="buy-me-coffee">
+        <h2>Support Us ☕</h2>
+        <p>Enjoy our content? Help us stay independent.</p>
+        <a href="https://www.buymeacoffee.com" class="btn-coffee">Buy Me a Coffee</a>
+    </section>
+
+    <!-- Whistleblower Section -->
+    <section id="whistleblower">
+        <h2>Got a Story? 🕵️</h2>
+        <p>Submit tips anonymously and help expose fraud.</p>
+        <a href="#" class="btn-story">Submit a Tip</a>
+    </section>
+
+    <!-- Subscription Popup -->
+    <div id="subscribe-popup" class="popup">
+        <div class="popup-content">
+            <h2>Subscribe to The Nigerian Ledger</h2>
+            <p>Stay updated on fraud investigations.</p>
+            <button id="subscribe-btn">Subscribe</button>
+            <button id="close-popup">Maybe Later</button>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://twitter.com/yourhandle" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/yourhandle" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/yourhandle" class="social-icon"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Subscription Popup Logic
+            const popup = document.getElementById('subscribe-popup');
+            setTimeout(() => { popup.style.display = 'flex'; }, 5000);
+
+            document.getElementById('subscribe-btn').addEventListener('click', () => {
+                alert("Thank you for subscribing!");
+                popup.style.display = 'none';
+            });
+
+            document.getElementById('close-popup').addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) popup.style.display = 'none';
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') popup.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+    </html>
+            
