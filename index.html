@@ -24,6 +24,34 @@
             align-items: center;
         }
 
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icons {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #008753 30%, #ffffff 70%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Magnifier Animation */
+        .magnifier {
+            cursor: pointer;
+            animation: dance 3s linear infinite;
+        }
+
         /* Dropdown Menu */
         .dropdown {
             position: relative;
@@ -52,12 +80,6 @@
 
         .dropdown-content li a:hover {
             background: #3a3a3a;
-        }
-
-        /* Sections */
-        .section {
-            padding: 4rem 2rem;
-            text-align: center;
         }
 
         /* Footer */
@@ -105,6 +127,15 @@
         .popup button:hover {
             background: #d100d1;
         }
+
+        /* Magnifier Animation */
+        @keyframes dance {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -10px) rotate(15deg); }
+            50% { transform: translate(-10px, 10px) rotate(-15deg); }
+            75% { transform: translate(15px, 5px) rotate(10deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
     </style>
 </head>
 <body>
@@ -112,8 +143,11 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
+            <span class="logo-icons">
+                <i class="fas fa-book-open"></i> 
+                <span class="magnifier">🔍</span> 
+            </span>
             <span class="logo-text">The Nigerian Ledger</span>
-            <p class="tagline">Truth · Accountability · One Entry at a Time</p>
         </div>
         <ul class="nav-links">
             <li><a href="#fraud-archives">Fraud Archives</a></li>
@@ -129,44 +163,6 @@
         </ul>
     </nav>
 
-    <!-- Fraud Archives Section -->
-    <section id="fraud-archives" class="section">
-        <h2>Fraud Archives</h2>
-        <p>Explore past and present fraud cases.</p>
-    </section>
-
-    <!-- Discourse Hub Section -->
-    <section id="discourse" class="section">
-        <h2>Dabira's Discourse Hub</h2>
-        <p>Discuss systemic issues in Nigeria and beyond.</p>
-    </section>
-
-    <!-- Marketplace Section -->
-    <section id="marketplace" class="section">
-        <h2>Crafted by Dabira</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/bag1.jpg" alt="Naija Jumbo Tote">
-                <h3>Naija Jumbo Tote</h3>
-                <p>₦15,000</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Buy Me a Coffee -->
-    <section id="buy-me-coffee">
-        <h2>Support Us ☕</h2>
-        <p>Enjoy our content? Help us stay independent.</p>
-        <a href="https://www.buymeacoffee.com" class="btn-coffee">Buy Me a Coffee</a>
-    </section>
-
-    <!-- Whistleblower Section -->
-    <section id="whistleblower">
-        <h2>Got a Story? 🕵️</h2>
-        <p>Submit tips anonymously and help expose fraud.</p>
-        <a href="#" class="btn-story">Submit a Tip</a>
-    </section>
-
     <!-- Subscription Popup -->
     <div id="subscribe-popup" class="popup">
         <div class="popup-content">
@@ -175,13 +171,6 @@
             <button id="subscribe-btn">Subscribe</button>
             <button id="close-popup">Maybe Later</button>
         </div>
-    </div>
-
-    <!-- Social Media Links -->
-    <div class="social-links">
-        <a href="https://twitter.com/yourhandle" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/yourhandle" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="https://facebook.com/yourhandle" class="social-icon"><i class="fab fa-facebook"></i></a>
     </div>
 
     <!-- Footer -->
