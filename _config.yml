@@ -1,7 +1,0 @@
-title: "The Nigerian Ledger"
-description: "Talking fraud, politics, and youth issues in Nigeria. One entry at a time."
-baseurl: ""
-url: "https://thenigerianledger.github.io"
-theme: minima  # (Temporary, Jekyll needs this to work)
-plugins:
-  - jekyll-feed
