@@ -1,17 +1,6 @@
-backend:
-  name: git-gateway
-  branch: main  # Change to your default branch if it's different
-
-media_folder: "uploads"  # Where images will be stored
-public_folder: "/uploads"
-
-collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+title: "The Nigerian Ledger"
+description: "Talking fraud, politics, and youth issues in Nigeria. One entry at a time."
+baseurl: ""
+url: "https://thenigerianledger.github.io"
+plugins:
+  - jekyll-feed
