@@ -28,4 +28,13 @@ defaults:
       type: "discourse-hub"
     values:
       layout: "post"
-      
+
+# Enable blog posts
+permalink: /:categories/:title/
+timezone: Africa/Lagos
+
+# Include a navigation section for easy access
+include:
+  - _posts
+  - _fraud-archives
+  - _discourse-hub
