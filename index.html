@@ -299,13 +299,6 @@
 <section id="fraud-archives" class="section">
     <h2>Fraud Archives</h2>
     <p>Explore past and present fraud cases.</p>
-    <ul>
-        {% for post in site.posts %}
-            {% if post.categories contains "fraud" %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%B %d, %Y" }})</li>
-            {% endif %}
-        {% endfor %}
-    </ul>
 </section>
 
   <!-- Discourse Hub Section -->
