@@ -1,0 +1,31 @@
+title: "The Nigerian Ledger by Dabira Awoniyi"
+description: "Talking fraud, politics, and youth issues in Nigeria. One entry at a time."
+baseurl: "" # Leave blank if deploying to GitHub Pages
+url: "https://thenigerianledger.github.io" # Update if using a custom domain
+
+theme: minima # Temporary theme for now
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  fraud-archives:
+    output: true
+    permalink: /fraud-archives/:path/
+  discourse-hub:
+    output: true
+    permalink: /discourse-hub/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "fraud-archives"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "discourse-hub"
+    values:
+      layout: "post"
+      
