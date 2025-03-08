@@ -4,69 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Nigerian Ledger</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            color: magenta;
+            text-decoration: none;
+        }
+
+        .highlighted {
+            background-color: darkmagenta;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        #buy-me-coffee button {
+            background-color: yellow;
+            color: red;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: gold;
+        }
+
+        #subscription-popup {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: purple;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("subscription-popup").style.display = "block";
+            }, 5000);
+        });
+
+        function closePopup() {
+            document.getElementById("subscription-popup").style.display = "none";
+        }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Fraud Archives</a></li>
-            <li><a href="#">Discourse Hub</a></li>
-            <li><a href="#">Numbers Don’t Lie</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
-
-    <!-- Header with Ledger Book Animation -->
     <header>
-        <div id="ledger-animation">
-            <img src="ledger.png" alt="Ledger Book">
-            <h1>The Nigerian Ledger</h1>
-            <p>Unmasking Deception, Challenging the System, One Entry at a Time.</p>
-        </div>
+        <h1>The Nigerian Ledger</h1>
+        <p>Unmasking Deception, Challenging the System, One Entry at a Time.</p>
+        <nav>
+            <ul>
+                <li><a href="#fraud-archives">Fraud Archives</a></li>
+                <li><a href="#discourse-hub">Discourse Hub</a></li>
+                <li><a href="#audit-trail">Numbers Don’t Lie: The Audit Trail</a></li>
+                <li><a href="#crafted-by-dabira">Crafted by Dabira (Coming Soon)</a></li>
+                <li><a href="#tip-section">Got a Story?</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <div class="category">Fraud Archives</div>
-        <div class="category">Discourse Hub</div>
-        <div class="category">Numbers Don’t Lie</div>
-    </section>
+    <main>
+        <section id="fraud-archives">
+            <h2>Fraud Archives</h2>
+            <p>Analyzing fraud cases and uncovering hidden schemes.</p>
+        </section>
 
-    <!-- Anonymous Tip Section -->
-    <section class="tip-section">
-        <h2>Got a Story?</h2>
-        <p>Submit an anonymous tip: <a href="mailto:thenigerianledger@gmail.com">thenigerianledger@gmail.com</a></p>
-    </section>
+        <section id="discourse-hub">
+            <h2>Discourse Hub</h2>
+            <p>Discussing systemic issues in Nigeria and beyond.</p>
+        </section>
 
-    <!-- Buy Me a Coffee -->
-    <section class="coffee-section">
-        <h2>Support Us</h2>
-        <button>Buy Me a Coffee</button>
-    </section>
+        <section id="audit-trail">
+            <h2>Numbers Don’t Lie: The Audit Trail</h2>
+            <p>Diving into forensic accounting and fraud analysis.</p>
+        </section>
 
-    <!-- Crafted by Dabira -->
-    <section class="crafted-section">
-        <h2>Crafted by Dabira</h2>
-        <p>Coming Soon</p>
-    </section>
+        <section id="crafted-by-dabira">
+            <h2>Crafted by Dabira (Coming Soon)</h2>
+        </section>
 
-    <!-- Social Media -->
+        <section id="tip-section" class="highlighted">
+            <h2>Got a Story?</h2>
+            <p>Submit anonymous tips at: <a href="mailto:thenigerianledger@gmail.com">thenigerianledger@gmail.com</a></p>
+        </section>
+
+        <section id="buy-me-coffee" class="highlighted">
+            <h2>Support Us</h2>
+            <button onclick="window.location.href='https://www.buymeacoffee.com/'">Buy Me a Coffee</button>
+        </section>
+    </main>
+
     <footer>
-        <div class="social-icons">
-            <img src="facebook.png" alt="Facebook">
-            <img src="twitter.png" alt="Twitter">
-            <img src="instagram.png" alt="Instagram">
+        <div id="social-icons">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">Instagram</a>
         </div>
-        <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
+        <p>&copy; 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
     </footer>
 
-    <!-- Subscription Popup -->
     <div id="subscription-popup">
-        <p>Subscribe to our Newsletter</p>
-        <button id="close-popup">Maybe Later</button>
+        <p>Subscribe to stay updated!</p>
+        <button onclick="closePopup()">Maybe Later</button>
     </div>
 </body>
-</html>
+                      </html>
