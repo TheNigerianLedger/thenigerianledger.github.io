@@ -154,7 +154,6 @@
       <li><a href="#fraud-archives">Fraud Archives</a></li>
       <li><a href="#numbers-dont-lie">Numbers Don’t Lie: The Audit Trail</a></li>
       <li><a href="#discourse">Discourse Hub</a></li>
-      <li><a href="#marketplace">Marketplace</a></li>
       <li class="dropdown">
         <a href="#">About ▼</a>
         <ul class="dropdown-content">
@@ -183,47 +182,34 @@
     <p>Discuss systemic issues in Nigeria and beyond.</p>
   </section>
 
-  <!-- Marketplace -->
-  <section id="marketplace" class="section">
-    <h2>Crafted by Dabira</h2>
-    <p>Handmade items and more.</p>
+  <!-- Got a Story? (Anonymous Tip Section) -->
+  <section id="tip-section" class="section" style="background: #2a2a2a; color: #ffffff; padding: 4rem 2rem; margin-top: 5rem; border-radius: 10px;">
+    <h2>Got a Story? 🕵️</h2>
+    <p>Submit tips anonymously and help expose fraud.</p>
+    <p>Email: <a href="mailto:thenigerianledger@gmail.com" style="color: #ffcc00; font-weight: bold;">thenigerianledger@gmail.com</a></p>
   </section>
 
-  <!-- Buy Me a Coffee Section -->
-  <section id="buy-me-coffee" class="section">
+  <!-- Buy Me a Coffee -->
+  <section id="buy-me-coffee" class="section" style="margin-top: 3rem; text-align: center;">
     <h2>Support Us ☕</h2>
     <p>Enjoy our content? Help us stay independent.</p>
     <a href="https://www.buymeacoffee.com" class="btn-coffee">Buy Me a Coffee</a>
   </section>
 
-  <!-- Anonymous Tip Section -->
-  <section id="tip-section" class="section">
-    <h2>Got a Story? 🕵️</h2>
-    <p>Submit tips anonymously and help expose fraud.</p>
-    <p>Email: <a href="mailto:thenigerianledger@gmail.com">thenigerianledger@gmail.com</a></p>
+  <!-- Crafted by Dabira (Marketplace) -->
+  <section id="marketplace" class="section" style="background: #1c1c2e; color: #ffffff; padding: 4rem 2rem; margin-top: 6rem; border-radius: 10px; text-align: center;">
+    <h2>Crafted by Dabira 🧵</h2>
+    <p><em>Coming Soon...</em></p>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
-  </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const magnifier = document.querySelector('.magnifier');
-
-      function startDance() {
-        magnifier.style.animation = 'dance 3s linear infinite';
-      }
-
-      magnifier.addEventListener('click', function() {
-        magnifier.style.animation = 'none';
-        setTimeout(startDance, 3000);
-      });
-
+      function startDance() { magnifier.style.animation = 'dance 3s linear infinite'; }
+      magnifier.addEventListener('click', () => { magnifier.style.animation = 'none'; setTimeout(startDance, 3000); });
       startDance();
     });
   </script>
 
 </body>
-</html>
+  </html>
