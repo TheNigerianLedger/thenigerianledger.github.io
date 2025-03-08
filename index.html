@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Nigerian Ledger</title>
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     /* GENERAL STYLES */
@@ -80,41 +79,75 @@
       color: #fff;
     }
 
-    /* DROPDOWN MENU */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1c1c2e;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      padding: 0.5rem;
-      border-radius: 5px;
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: #d4b2ff;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      display: block;
-      transition: background-color 0.3s;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #333;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* SECTION STYLES */
+    /* SECTIONS */
     .section {
       padding: 4rem 2rem;
       text-align: center;
+    }
+
+    /* CRAFTED BY DABIRA */
+    .crafted-section {
+      background: #1c1c2e;
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .crafted-section h2 {
+      margin-top: 0;
+      color: #a97cff;
+    }
+
+    .coming-soon {
+      color: #ff6347;
+      font-style: italic;
+    }
+
+    /* BUY ME A COFFEE */
+    .btn-coffee {
+      display: inline-block;
+      margin: 1rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #f4a261;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-coffee:hover {
+      background-color: #e76f51;
+    }
+
+    /* ANONYMOUS TIP SECTION */
+    .tip-section {
+      background: #1c1c2e;
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .tip-section h2 {
+      margin-top: 0;
+    }
+
+    .tip-section button {
+      background: #008753;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .tip-section button:hover {
+      background: #006f42;
     }
 
     /* SOCIAL MEDIA LINKS */
@@ -142,79 +175,6 @@
       background: #1c1c2e;
       margin-top: 20px;
     }
-
-    /* BUY ME A COFFEE BUTTON */
-    .btn-coffee {
-      display: inline-block;
-      margin: 1rem auto;
-      padding: 0.75rem 1.5rem;
-      background-color: #008753;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .btn-coffee:hover {
-      background-color: #006f42;
-    }
-
-    /* ANONYMOUS TIP SECTION */
-    .tip-section {
-      background: #1c1c2e;
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem auto;
-      max-width: 600px;
-    }
-
-    .tip-section h2 {
-      margin-top: 0;
-    }
-
-    .tip-section input,
-    .tip-section textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin: 0.5rem 0;
-      border: none;
-      border-radius: 5px;
-      background: #333;
-      color: #fff;
-    }
-
-    .tip-section button {
-      background: #008753;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .tip-section button:hover {
-      background: #006f42;
-    }
-
-    /* CRAFTED BY DABIRA SECTION */
-    .crafted-section {
-      background: #1c1c2e;
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem auto;
-      max-width: 600px;
-    }
-
-    .crafted-section h2 {
-      margin-top: 0;
-      color: #a97cff;
-    }
-
-    .coming-soon {
-      color: #ff6347;
-      font-style: italic;
-    }
   </style>
 </head>
 <body>
@@ -233,7 +193,60 @@
     </div>
     <ul class="nav-links">
       <li><a href="#fraud-archives">Fraud Archives</a></li>
-      <li><a href="#numbers-dont-lie">Numbers Don’t Lie: The Audit Trail</a></li>
+      <li><a href="#numbers-dont-lie">Numbers Don’t Lie</a></li>
+      <li><a href="#discourse-hub">Discourse Hub</a></li>
+      <li><a href="#crafted-by-dabira">Crafted by Dabira</a></li>
       <li><a href="#about">About</a></li>
-      <li class="dropdown">
-        <a href="javascript0
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="fraud-archives" class="section">
+    <h2>Fraud Archives</h2>
+    <p>Explore past and present fraud cases.</p>
+  </section>
+
+  <section id="numbers-dont-lie" class="section">
+    <h2>Numbers Don’t Lie</h2>
+    <p>Forensic accounting insights and investigations.</p>
+  </section>
+
+  <section id="discourse-hub" class="section">
+    <h2>Dabira's Discourse Hub</h2>
+    <p>Discuss systemic issues in Nigeria and beyond.</p>
+  </section>
+
+  <!-- Crafted by Dabira -->
+  <section id="crafted-by-dabira" class="crafted-section">
+    <h2>Crafted by Dabira</h2>
+    <p class="coming-soon">Coming Soon!</p>
+  </section>
+
+  <!-- Buy Me a Coffee -->
+  <section class="section">
+    <h2>Support Us ☕</h2>
+    <p>Enjoy our content? Help us stay independent.</p>
+    <a href="https://www.buymeacoffee.com" class="btn-coffee">Buy Me a Coffee</a>
+  </section>
+
+  <!-- Anonymous Tip Section -->
+  <section class="tip-section">
+    <h2>Got a Story? 🕵️</h2>
+    <p>Submit tips anonymously and help expose fraud.</p>
+    <button onclick="location.href='mailto:thenigerianledger@gmail.com'">Submit a Tip</button>
+  </section>
+
+  <!-- Social Media -->
+  <div class="social-links">
+    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
+  </footer>
+
+</body>
+  </html>
