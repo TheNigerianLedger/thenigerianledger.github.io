@@ -6,6 +6,7 @@
   <title>The Nigerian Ledger</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
+    /* GENERAL STYLES */
     body {
       font-family: 'Arial', sans-serif;
       background: #121212;
@@ -15,6 +16,7 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION BAR */
     .navbar {
       background: #1c1c2e;
       padding: 1rem 2rem;
@@ -24,6 +26,7 @@
       flex-wrap: wrap;
     }
 
+    /* LOGO BOX */
     .logo-box {
       display: flex;
       align-items: center;
@@ -35,10 +38,38 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     }
 
+    /* LOGO ICONS */
     .logo-icons {
       display: flex;
       align-items: center;
       gap: 5px;
+    }
+
+    .fa-book-open {
+      font-size: 2rem;
+      transform: rotateY(90deg);
+      animation: openBook 2s ease-in-out forwards;
+      transform-origin: left center;
+    }
+
+    @keyframes openBook {
+      0% { transform: rotateY(90deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+
+    .magnifier {
+      font-size: 2rem;
+      cursor: pointer;
+      animation: dance 3s linear infinite;
+    }
+
+    @keyframes dance {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(10px, -10px) rotate(15deg); }
+      50% { transform: translate(-10px, 10px) rotate(-15deg); }
+      75% { transform: translate(15px, 5px) rotate(10deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
     }
 
     .logo-text {
@@ -55,6 +86,7 @@
       margin: 0;
     }
 
+    /* NAVIGATION LINKS */
     .nav-links {
       display: flex;
       gap: 2rem;
@@ -73,11 +105,29 @@
       color: #fff;
     }
 
+    /* SECTION STYLES */
     .section {
       padding: 4rem 2rem;
       text-align: center;
     }
 
+    /* BUY ME A COFFEE BUTTON */
+    .btn-coffee {
+      background: #f44336;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .btn-coffee:hover {
+      transform: scale(1.05);
+      background: #d32f2f;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
@@ -88,6 +138,7 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo-box">
       <div class="logo-icons">
@@ -102,7 +153,7 @@
     <ul class="nav-links">
       <li><a href="#fraud-archives">Fraud Archives</a></li>
       <li><a href="#numbers-dont-lie">Numbers Don’t Lie: The Audit Trail</a></li>
-      <li><a href="#discourse-hub">Discourse Hub</a></li>
+      <li><a href="#discourse">Discourse Hub</a></li>
       <li><a href="#marketplace">Marketplace</a></li>
       <li class="dropdown">
         <a href="#">About ▼</a>
@@ -114,47 +165,65 @@
     </ul>
   </nav>
 
+  <!-- Fraud Archives Section -->
   <section id="fraud-archives" class="section">
     <h2>Fraud Archives</h2>
     <p>Explore past and present fraud cases.</p>
   </section>
 
+  <!-- Numbers Don’t Lie -->
   <section id="numbers-dont-lie" class="section">
     <h2>Numbers Don’t Lie: The Audit Trail</h2>
     <p>Forensic accounting insights and investigations.</p>
   </section>
 
-  <section id="discourse-hub" class="section">
-    <h2>Discourse Hub</h2>
-    <p>Discussing systemic issues in Nigeria and beyond.</p>
+  <!-- Discourse Hub Section -->
+  <section id="discourse" class="section">
+    <h2>Dabira's Discourse Hub</h2>
+    <p>Discuss systemic issues in Nigeria and beyond.</p>
   </section>
 
+  <!-- Marketplace -->
   <section id="marketplace" class="section">
     <h2>Crafted by Dabira</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/bag1.jpg" alt="Naija Jumbo Tote">
-        <h3>Naija Jumbo Tote</h3>
-        <p>₦15,000</p>
-      </div>
-    </div>
+    <p>Handmade items and more.</p>
   </section>
 
+  <!-- Buy Me a Coffee Section -->
   <section id="buy-me-coffee" class="section">
     <h2>Support Us ☕</h2>
     <p>Enjoy our content? Help us stay independent.</p>
     <a href="https://www.buymeacoffee.com" class="btn-coffee">Buy Me a Coffee</a>
   </section>
 
-  <div class="social-links">
-    <a href="https://twitter.com/yourhandle" class="social-icon"><i class="fab fa-twitter"></i></a>
-    <a href="https://instagram.com/yourhandle" class="social-icon"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/yourhandle" class="social-icon"><i class="fab fa-facebook"></i></a>
-  </div>
+  <!-- Anonymous Tip Section -->
+  <section id="tip-section" class="section">
+    <h2>Got a Story? 🕵️</h2>
+    <p>Submit tips anonymously and help expose fraud.</p>
+    <p>Email: <a href="mailto:thenigerianledger@gmail.com">thenigerianledger@gmail.com</a></p>
+  </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const magnifier = document.querySelector('.magnifier');
+
+      function startDance() {
+        magnifier.style.animation = 'dance 3s linear infinite';
+      }
+
+      magnifier.addEventListener('click', function() {
+        magnifier.style.animation = 'none';
+        setTimeout(startDance, 3000);
+      });
+
+      startDance();
+    });
+  </script>
+
 </body>
-  </html>
+</html>
