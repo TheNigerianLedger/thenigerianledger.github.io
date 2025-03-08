@@ -45,12 +45,41 @@
       gap: 5px;
     }
 
-    .logo-text {
-      font-size: 1.8rem;
-      background: linear-gradient(45deg, #008753 30%, #ffffff 70%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .fa-book-open {
+      font-size: 2rem;
+      transform: rotateY(90deg);
+      animation: openBook 2s ease-in-out forwards;
+      transform-origin: left center;
+    }
+
+    @keyframes openBook {
+      0% { transform: rotateY(90deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+
+    /* MAGNIFYING GLASS */
+    .magnifier {
+      font-size: 2rem;
+      cursor: pointer;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .magnifier:hover {
+      animation: dance 1s infinite;
+    }
+
+    @keyframes dance {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
     }
 
     /* TAGLINE */
@@ -60,112 +89,41 @@
       margin: 0;
     }
 
-    /* NAVIGATION LINKS */
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links a {
-      color: #d4b2ff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #fff;
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    /* CRAFTED BY DABIRA */
-    .crafted-section {
-      background: #1c1c2e;
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem auto;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    .crafted-section h2 {
-      margin-top: 0;
-      color: #a97cff;
-    }
-
-    .coming-soon {
-      color: #ff6347;
-      font-style: italic;
-    }
-
-    /* BUY ME A COFFEE */
-    .btn-coffee {
-      display: inline-block;
-      margin: 1rem auto;
-      padding: 0.75rem 1.5rem;
-      background-color: #f4a261;
-      color: #121212;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .btn-coffee:hover {
-      background-color: #e76f51;
-    }
-
-    /* ANONYMOUS TIP SECTION */
-    .tip-section {
-      background: #1c1c2e;
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem auto;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    .tip-section h2 {
-      margin-top: 0;
-    }
-
-    .tip-section button {
-      background: #008753;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .tip-section button:hover {
-      background: #006f42;
-    }
-
-    /* SOCIAL MEDIA LINKS */
-    .social-links {
-      display: flex;
+    /* SUBSCRIPTION POPUP */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
       justify-content: center;
-      gap: 1rem;
-      margin: 2rem 0;
+      align-items: center;
+      z-index: 1000;
     }
 
-    .social-icon {
-      color: #d4b2ff;
-      font-size: 1.5rem;
-      transition: color 0.3s;
+    .popup-content {
+      background: #1a1a3f;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      border: 2px solid #ff00ff;
     }
 
-    .social-icon:hover {
-      color: #fff;
+    .popup button {
+      background: #ff00ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .popup button:hover {
+      background: #d100d1;
     }
 
     /* FOOTER */
@@ -191,62 +149,47 @@
         <p class="tagline">Unmasking Deception, Challenging the System, One Entry at a Time.</p>
       </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#fraud-archives">Fraud Archives</a></li>
-      <li><a href="#numbers-dont-lie">Numbers Don’t Lie</a></li>
-      <li><a href="#discourse-hub">Discourse Hub</a></li>
-      <li><a href="#crafted-by-dabira">Crafted by Dabira</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
   </nav>
 
-  <!-- Sections -->
-  <section id="fraud-archives" class="section">
-    <h2>Fraud Archives</h2>
-    <p>Explore past and present fraud cases.</p>
-  </section>
-
-  <section id="numbers-dont-lie" class="section">
-    <h2>Numbers Don’t Lie</h2>
-    <p>Forensic accounting insights and investigations.</p>
-  </section>
-
-  <section id="discourse-hub" class="section">
-    <h2>Dabira's Discourse Hub</h2>
-    <p>Discuss systemic issues in Nigeria and beyond.</p>
-  </section>
-
-  <!-- Crafted by Dabira -->
-  <section id="crafted-by-dabira" class="crafted-section">
-    <h2>Crafted by Dabira</h2>
-    <p class="coming-soon">Coming Soon!</p>
-  </section>
-
-  <!-- Buy Me a Coffee -->
-  <section class="section">
-    <h2>Support Us ☕</h2>
-    <p>Enjoy our content? Help us stay independent.</p>
-    <a href="https://www.buymeacoffee.com" class="btn-coffee">Buy Me a Coffee</a>
-  </section>
-
-  <!-- Anonymous Tip Section -->
-  <section class="tip-section">
-    <h2>Got a Story? 🕵️</h2>
-    <p>Submit tips anonymously and help expose fraud.</p>
-    <button onclick="location.href='mailto:thenigerianledger@gmail.com'">Submit a Tip</button>
-  </section>
-
-  <!-- Social Media -->
-  <div class="social-links">
-    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+  <!-- Subscription Popup -->
+  <div id="subscribe-popup" class="popup">
+    <div class="popup-content">
+      <h2>Subscribe to The Nigerian Ledger</h2>
+      <p>Stay updated on fraud investigations.</p>
+      <button id="subscribe-btn">Subscribe</button>
+      <button id="close-popup">Maybe Later</button>
+    </div>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 The Nigerian Ledger by Dabira Awoniyi. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Subscription Popup Logic
+      const popup = document.getElementById('subscribe-popup');
+      setTimeout(() => { popup.style.display = 'flex'; }, 5000);
+
+      document.getElementById('subscribe-btn').addEventListener('click', () => {
+        alert("Thank you for subscribing!");
+        popup.style.display = 'none';
+      });
+
+      document.getElementById('close-popup').addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) popup.style.display = 'none';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') popup.style.display = 'none';
+      });
+    });
+  </script>
 
 </body>
   </html>
